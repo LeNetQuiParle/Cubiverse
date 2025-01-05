@@ -20,4 +20,8 @@ or
 ```bash
 python3 -m pip install ursina
 ```
-The file "perlin-test.py" is not required, it's just a perlin noise qorld test file
+The file "perlin-test.py" is not required, it's just a perlin noise world test file  
+You can install the perlin noise module by typing in the cmd :  
+```bash
+pip install perlin-noise
+```
