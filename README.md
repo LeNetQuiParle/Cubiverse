@@ -1,5 +1,6 @@
 # Voxel game
-voxel game in python maded with ursina engine
+Voxel game in python maded with ursina engine.  
+Based on the "Minecraft Clone" ursina sample.
 ## Keys
 + move around : WASD, ZQSD
 + jump : space bar
@@ -12,16 +13,7 @@ Open the cmd and type
 ```bash
 pip install ursina
 ```
-If not found, try
-```bash
-python -m pip install ursina
-```
 or
 ```bash
-python3 -m pip install ursina
-```
-The file "perlin-test.py" is not required, it's just a perlin noise world test file  
-You can install the perlin noise module by typing in the cmd :  
-```bash
-pip install perlin-noise
+python -m pip install ursina
 ```
