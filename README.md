@@ -1,5 +1,7 @@
 # Cubiverse
 
+[![play on itch.io](https://i.imgur.com/gvtr7jn.jpeg)](https://lepcquiparle.itch.io/cubiverse)
+
 Voxel game in python maded with ursina engine and perlin noise modules.  
 Based on the "Minecraft Clone" ursina sample.
 
