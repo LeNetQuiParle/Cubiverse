@@ -11,7 +11,7 @@ world = PerlinNoise(seed=seed_input)
 
 app = Ursina(title='Cubiverse',
   icon='icon.ico',
-  fullscreen=True,
+  fullscreen=False,
   editor_ui_enabled=False,
   development_mode=False,
   show_ursina_splash=True,)
@@ -106,7 +106,7 @@ def input(key):
 
 
 def update():
-  global step_timer, step_interval
+  global step_timer, step_interval, hand
   if player.y < -50: player.position = (0,11,0)
   
   if (held_keys['w'] or held_keys['a'] or held_keys['s'] or held_keys['d']) and player.grounded:
@@ -114,6 +114,8 @@ def update():
     if step_timer <= 0:
       Audio(f'sounds/step/grass{randint(1,6)}.ogg')
       step_timer = step_interval
+  hand.texture=textures[actual_block]
+  
 
 player = FirstPersonController(
   speed=6,
@@ -152,6 +154,16 @@ view = 1
 sun = DirectionalLight(shadows=False)
 sun.look_at(Vec3(1,-1,-1))
 Sky()
+
+hand = Entity(
+  parent=camera.ui,
+  model="cube",
+  texture=actual_block,
+  rotation=(35,-45,0),
+  scale=.2,
+  position = Vec2(.5,-.3)
+
+)
 
 
 
